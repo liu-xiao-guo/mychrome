@@ -1,16 +1,16 @@
-name: mychrome # you probably want to 'snapcraft register <name>'
-version: '0.3' # just for humans, typically '1.2+git' or '1.3.2'
-summary: Chrome for snap # 79 char long summary
+name: mychrome
+version: '0.3' 
+summary: Chrome for snap 
 description: |
   This is chrome app in snap format
 
-grade: stable # must be 'stable' to release into candidate/stable channels
-confinement: strict # use 'strict' once you have the right plugs and slots
+grade: stable 
+confinement: strict
 
 apps: 
   mychrome:
     command: desktop-launch $SNAP/opt/google/chrome/chrome
-    plugs: [unity7,home,x11,opengl,network,network-bind,browser-support,process-control,fuse-support]
+    plugs: [unity7,home,x11,opengl,network,network-bind,browser-support,process-control,fuse-support,camera,gsettings,pulseaudio]
 
 parts:
   chrome:
